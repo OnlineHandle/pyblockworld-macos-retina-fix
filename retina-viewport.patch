@@ -1,0 +1,24 @@
+--- a/pyblockworld/__init__.py
++++ b/pyblockworld/__init__.py
+@@ -788,8 +788,9 @@
+
+         """
+         width, height = self.get_size()
++        fb_width, fb_height = self.get_framebuffer_size()
+         glDisable(GL_DEPTH_TEST)
+-        glViewport(0, 0, width, height)
++        glViewport(0, 0, fb_width, fb_height)
+         glMatrixMode(GL_PROJECTION)
+         glLoadIdentity()
+         glOrtho(0, width, 0, height, -1, 1)
+@@ -801,8 +802,9 @@
+
+         """
+         width, height = self.get_size()
++        fb_width, fb_height = self.get_framebuffer_size()
+         glEnable(GL_DEPTH_TEST)
+-        glViewport(0, 0, width, height)
++        glViewport(0, 0, fb_width, fb_height)
+         glMatrixMode(GL_PROJECTION)
+         glLoadIdentity()
+         gluPerspective(65.0, width / float(height), 0.1, 60.0)
