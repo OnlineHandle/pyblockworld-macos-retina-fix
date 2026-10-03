@@ -1,5 +1,7 @@
 # PyBlockWorld macOS Retina Rendering Fix
 
+![PyBlockWorld Retina rendering issue](screenshots/pyblockworld-retina-bug.png)
+
 A reproducible fix for incomplete OpenGL rendering in PyBlockWorld on macOS Retina displays.
 
 ## Problem
